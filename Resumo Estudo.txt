@@ -1,0 +1,37 @@
+
+CLASSES: São formas/modelos/moldes de determinado OBJETO, para ser utilizado/instanciado.
+Toda classe começa com a 1ª letra maiúscula e a primeira letra das demais palavras tbm maiúscula;
+
+VARIÁVEIS: São espaços alocados na memória para guardar dados que serão utilizados posteriormente. Podem ser:
+String; int; Double; Float; Boolean; 
+O nome das variáveis começam com a letra da 1ª palavra minúscula e a 1ª das demais maiúscula;
+
+MÉTODOS: São ações/funções a serem "chamadas" (executadas) por uma ou mais classes no programa. SINTAXE:
+1 - Começa com o tipo de RETORNO. VOID - não tem retorno nenhum. DOUBLE (retorna um DOUBLE)...
+2 - após o nome do método, mesmo padrão das variáveis, abre e fecha parêntese, para PASSAR ou NÃO, um parâmetro
+3 - Abre e fecha chaves que contém as instruções a serem executadas no método, quando ele for chamado.
+EXEMPLO (Considerando uma variável VALOR previamente definida):  
+	void sacar(double valor) {
+	   saldo = saldo - valor;
+}
+
+SOBRECARGA (Overload): É uma forma de criar varios métodos com o mesmo nome, mas com parâmetros diferentes. Inclusive,
+pode-se chamar um método dentro de uma SOBRECARGA, aproveitando o conteúdo do método anterior. EXEMPLO:
+
+void sacar (double valor, double taxaSaque) {
+		sacar(valor + taxaSaque);
+}
+
+CONSTRUTORES: Todas as classes Java possuem Construtores que são invocados para instanticar OBJETOS de uma classe.
+São como métodos que executam na inicialização de um objeto instanciado.
+SINTAXE: Nome da classe (igualzinho); abre e fecha parêntese (para os parâmetros) e abre e fecha chaves {} para o código.
+Esses parâmetros informados no Construtor, já exigem que ao chamar o método, sejam informados os parâmetros.
+Esses parâmetros, tem uma finalidade e para isso, precisam ser referenciados/atribuídos ao Objeto específico.
+
+ENCAPSULAMENTO: É uma técnica para esconder informações internas da classe, PROTEGENDO o acesso às variáveis de instância,
+a fim de que não sejam modificadas/utilizadas indevidamente. A forma de fazer isso é pelo MODIFICADOR:
+
+PRIVATE: Este modificador informado antes da variável, não permite o acesso a esta variável por classes externas. A partir
+da modificação das variáveis, elas ficam acessíveis por meio do Java Beans, ou, método GET AND SET (Getter e Setter).
+(*) Mesmo assim, por meio do método SET e GET, é possível alterar determinadas variáveis. Então o correto é NÃO EXPÔR as
+variáveis que não devem ser alteradas nesses métodos, excluindo os métodos GET e SET dessas variáveis.
